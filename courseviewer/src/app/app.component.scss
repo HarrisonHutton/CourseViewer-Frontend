@@ -1,0 +1,26 @@
+/* Import the global stylesheet, ../styles.scss */
+@import '../styles';
+
+$sidebar-width: 250px;
+
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: $sidebar-width auto;
+
+    background: $color-quinary;
+}
+
+.sidebar {
+    background: $color-quinary;
+    border-right: 2px solid $color-secondary;
+
+    /* Give a shadow to on the right side. */
+    box-shadow: 6px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.main {
+    padding: 2rem 4rem;
+}
