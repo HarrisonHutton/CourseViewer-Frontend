@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CoursesdbService } from '../@services/coursesdb.service';
 import { CourseInfo } from '../@interfaces/course-info';
+import { SearchOptionsService } from '../@services/search-options.service';
 
 @Component({
   selector: 'app-courses-view',
@@ -9,7 +10,10 @@ import { CourseInfo } from '../@interfaces/course-info';
 })
 export class CoursesViewComponent {
 
-  constructor(private coursesdb: CoursesdbService) { }
+  constructor(
+      private coursesdb: CoursesdbService,
+      private searchOptions: SearchOptionsService
+  ) { }
 
   courses: CourseInfo[] = [];
 

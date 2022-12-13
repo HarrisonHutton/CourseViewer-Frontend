@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CoursesViewComponent } from './courses-view/courses-view.component';
 import { CoursesdbService } from './@services/coursesdb.service';
 import { SearchOptionsComponent } from './search-options/search-options.component';
+import { SearchOptionsService } from './@services/search-options.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SearchOptionsComponent } from './search-options/search-options.componen
     HttpClientModule
   ],
   providers: [
-    CoursesdbService
+    CoursesdbService,
+    SearchOptionsService
   ],
   bootstrap: [AppComponent]
 })

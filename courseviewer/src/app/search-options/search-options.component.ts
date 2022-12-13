@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SearchOptionsService } from '../@services/search-options.service';
 
 @Component({
   selector: 'app-search-options',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
 export class SearchOptionsComponent {
 
   selectedDepartment: string = '';
+
+  constructor(private searchOptions: SearchOptionsService) { }
 
 }
