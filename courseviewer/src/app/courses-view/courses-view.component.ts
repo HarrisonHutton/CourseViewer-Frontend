@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { CoursesdbService } from '../../utils/services/coursesdb.service';
-import { CourseInfo } from '../../utils/interfaces/course-info';
+import { CoursesdbService } from '../@services/coursesdb.service';
+import { CourseInfo } from '../@interfaces/course-info';
 
 @Component({
   selector: 'app-courses-view',

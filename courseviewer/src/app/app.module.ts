@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoursesViewComponent } from './courses-view/courses-view.component';
-import { CoursesdbService } from '../utils/services/coursesdb.service';
+import { CoursesdbService } from './@services/coursesdb.service';
 import { SearchOptionsComponent } from './search-options/search-options.component';
 
 @NgModule({
