@@ -1,8 +1,6 @@
 @import '../../styles';
 
 .courses-grid {
-    padding: 2rem 4rem;
-
     display: grid;
 
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
