@@ -1,0 +1,29 @@
+@import '../../styles';
+
+.courses-grid {
+    padding: 2rem 4rem;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fill);
+    grid-gap: 2rem;
+}
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 1rem;
+    border: 2px solid $color-quaternary;
+    border-radius: 10px;
+
+    height: 14rem;
+}
+
+h1 {
+    font-size: 1.5em;
+    color: $color-primary;
+}

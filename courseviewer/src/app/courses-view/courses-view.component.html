@@ -1,0 +1,12 @@
+<div class="courses-grid">
+    <div class="course-card" *ngFor="let course of courses">
+        <div class="course-card-header">
+            <h1>{{ course.dpt_code }}: {{course.course_num}}</h1>
+            <h2>{{ course.course_name }}</h2>
+        </div>
+
+        <div class="course-card-footer">
+            <h2>Credits: {{ course.credits }}</h2>
+        </div>
+    </div>
+</div>

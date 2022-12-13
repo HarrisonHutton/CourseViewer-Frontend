@@ -5,6 +5,8 @@ $color-tertiary: #4f90c4;
 $color-quaternary: #b3d6e6;
 $color-quinary: #f5f5f5;
 
+$background-blue: #212534;
+
 // Inspiration for these default reset styles came from Kevin Powell's video:
 // https://www.youtube.com/shorts/2lyDv0wOQuQ
 
@@ -27,7 +29,7 @@ body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
     // Off-white background:
-    background: #f5f5f5;
+    background: darken($color-quinary, 100%);
 }
   
 img, picture, svg, video {
