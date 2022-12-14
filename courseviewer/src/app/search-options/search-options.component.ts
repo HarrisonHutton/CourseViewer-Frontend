@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SearchOptionsService } from '../@services/search-options.service';
 
 @Component({
@@ -6,10 +6,18 @@ import { SearchOptionsService } from '../@services/search-options.service';
   templateUrl: './search-options.component.html',
   styleUrls: ['./search-options.component.scss']
 })
-export class SearchOptionsComponent {
+export class SearchOptionsComponent implements OnInit {
 
-  selectedDepartment: string = '';
+  selectedDepartment: string = 'CSE';
 
   constructor(private searchOptions: SearchOptionsService) { }
+
+  ngOnInit() {
+    this.searchOptions.currentDpt.subscribe(dpt => this.selectedDepartment = dpt);
+  }
+
+  onChoseDpt(dpt: string) {
+    this.searchOptions.changeDpt(dpt);
+  }
 
 }

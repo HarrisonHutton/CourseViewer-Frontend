@@ -15,12 +15,21 @@ export class CoursesViewComponent {
       private searchOptions: SearchOptionsService
   ) { }
 
+  currentDpt: string = '';
+
   courses: CourseInfo[] = [];
 
   ngOnInit(): void {
-    this.coursesdb.getDptCourses("CSE").subscribe((data: any) => {
-      this.courses = JSON.parse(data);
+    /* Get the most recently chosen department */
+    this.searchOptions.currentDpt.subscribe(dpt => {
+      this.currentDpt = dpt;
+      /* Get the courses for the most recently chosen department */
+      this.coursesdb.getDptCourses(this.currentDpt).subscribe((data: any) => {
+        this.courses = JSON.parse(data);
+      });
     });
   }
+
+
 
 }

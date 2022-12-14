@@ -1,6 +1,10 @@
 <div class="search-options-container">
     <form>
-        <select class="department-selector">
+        <select class="department-selector" 
+                name="department-selector"
+                [(ngModel)]="selectedDepartment" 
+                (ngModelChange)="onChoseDpt($event)">
+            <option [value]="selectedDepartment" selected disabled>{{ selectedDepartment }}</option>
             <option value="CSE">CSE</option>
             <option value="MTH">MTH</option>
             <option value="PHY">PHY</option>

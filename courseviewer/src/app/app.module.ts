@@ -8,6 +8,7 @@ import { CoursesViewComponent } from './courses-view/courses-view.component';
 import { CoursesdbService } from './@services/coursesdb.service';
 import { SearchOptionsComponent } from './search-options/search-options.component';
 import { SearchOptionsService } from './@services/search-options.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SearchOptionsService } from './@services/search-options.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     CoursesdbService,
