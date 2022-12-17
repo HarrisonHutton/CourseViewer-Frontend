@@ -15,4 +15,8 @@ export class CoursesdbService {
   getDptCourses(dpt: string) {
     return this.http.get(`http://localhost:5000/api/courses/${dpt}`);
   }
+
+  getAllDepartments() {
+    return this.http.get('http://localhost:5000/api/departments');
+  }
 }
