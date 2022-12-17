@@ -4,11 +4,11 @@
                 name="department-selector"
                 [(ngModel)]="selectedDepartment" 
                 (ngModelChange)="onChoseDpt($event)">
-            <option [value]="selectedDepartment" selected disabled>{{ selectedDepartment }}</option>
-            <option value="CSE">CSE</option>
-            <option value="MTH">MTH</option>
-            <option value="PHY">PHY</option>
-            <option value="PSY">PSY</option>
+            <option *ngFor="let department of allDepartments"
+                    [value]="department" 
+                    [disabled]="department === selectedDepartment">
+                {{ department }}
+            </option>
         </select>
     </form>
 </div>

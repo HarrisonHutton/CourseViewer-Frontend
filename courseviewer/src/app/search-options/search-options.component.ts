@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CoursesdbService } from '../@services/coursesdb.service';
 import { SearchOptionsService } from '../@services/search-options.service';
 
 @Component({
@@ -10,9 +11,17 @@ export class SearchOptionsComponent implements OnInit {
 
   selectedDepartment: string = 'CSE';
 
-  constructor(private searchOptions: SearchOptionsService) { }
+  allDepartments: string[] = [];
+
+  constructor(
+      private coursesdb: CoursesdbService,
+      private searchOptions: SearchOptionsService
+    ) { }
 
   ngOnInit() {
+    this.coursesdb.getAllDepartments().subscribe((data: any) => {
+      this.allDepartments = JSON.parse(data);
+    })
     this.searchOptions.currentDpt.subscribe(dpt => this.selectedDepartment = dpt);
   }
 
