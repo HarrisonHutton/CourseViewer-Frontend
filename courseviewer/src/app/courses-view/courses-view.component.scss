@@ -3,7 +3,7 @@
 .courses-grid {
     display: grid;
 
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(calc(20rem * $card-aspect-ratio), 1fr));
     grid-template-rows: repeat(auto-fill);
     grid-gap: 2rem;
 }
@@ -18,10 +18,17 @@
     border: 2px solid $color-quaternary;
     border-radius: 10px;
 
-    height: 14rem;
-}
+    height: 20rem;
+    aspect-ratio: $card-aspect-ratio;
 
-h1 {
-    font-size: 1.5em;
-    color: $color-primary;
+    h1 {
+        font-size: 1.5em;
+        font-weight: 700;
+        background: rgb(0,91,187);
+        background: linear-gradient(48deg, rgba(0,91,187,1) 0%, rgba(51,167,240,1) 100%);
+
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
