@@ -9,15 +9,13 @@ $sidebar-width: 250px;
 
     display: grid;
     grid-template-columns: $sidebar-width auto;
-
-    background: #212534;
 }
 
 .sidebar {
     grid-column: 1;
 
     background: $color-quinary;
-    border-right: 2px solid $color-secondary;
+    border-right: 4px solid $color-secondary;
 
     /* Give a shadow to on the right side. */
     box-shadow: 6px 0 6px rgba(0, 0, 0, 0.1);
@@ -27,4 +25,6 @@ $sidebar-width: 250px;
     padding: 2rem 4rem;
     grid-column: 2;
     overflow: scroll;
+
+    background: #222222;
 }
