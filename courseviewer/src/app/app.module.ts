@@ -9,12 +9,14 @@ import { CoursesdbService } from './@services/coursesdb.service';
 import { SearchOptionsComponent } from './search-options/search-options.component';
 import { SearchOptionsService } from './@services/search-options.service';
 import { FormsModule } from '@angular/forms';
+import { DepartmentHeaderComponent } from './department-header/department-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesViewComponent,
     SearchOptionsComponent,
+    DepartmentHeaderComponent,
   ],
   imports: [
     BrowserModule,
